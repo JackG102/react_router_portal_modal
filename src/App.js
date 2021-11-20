@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './components/Header';
 
 const App = () => {
   return(
     <>
-      <h1>React Nav Router</h1>
+      <Header />
     </>
   );
 }

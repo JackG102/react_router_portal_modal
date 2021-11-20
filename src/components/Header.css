@@ -1,0 +1,9 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 100vh;
+  background: #5191CD;
+  width: fit-content;
+  color: white;
+}
