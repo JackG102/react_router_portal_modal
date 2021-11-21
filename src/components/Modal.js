@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './Modal.css';
 
 const Modal = ({ modalVisible, setModalVisible }) => {
-  return (
+  return ReactDOM.createPortal(
     <>
     { 
       modalVisible ?
@@ -18,7 +19,8 @@ const Modal = ({ modalVisible, setModalVisible }) => {
  
       : null
     }
-   </>
+   </>,
+   document.querySelector('#modal-portal')
   );
 }
 
