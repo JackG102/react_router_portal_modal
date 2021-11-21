@@ -1,26 +1,24 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route
+  Routes,
+  Route,
+  BrowserRouter
 } from 'react-router-dom';
 import Header from './components/Header';
+import Homepage from './components/Homepage';
+import About from './components/About';
+import Settings from './components/Settings';
+
 
 const App = () => {
   return(
     <>
       <Header />
-      <Switch>
-          <Route path="/about">
-            <h2>About</h2>
-          </Route>
-          <Route path="/users">
-            <h2>Users</h2>
-          </Route>
-          <Route path="/">
-            <h2>Home</h2>
-          </Route>
-        </Switch>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
     </>
   );
 }
