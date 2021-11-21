@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Routes,
   Route,
@@ -10,14 +10,18 @@ import Homepage from './components/Homepage';
 import About from './components/About';
 import Settings from './components/Settings';
 
-
 const App = () => {
+  const [modalVisible, setModalVisible] = useState(true);
+
   return(
     <div className="app-container">
       <Header />
       <div className="content-container">
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route 
+          path="/" 
+          element={<Homepage modalVisible={modalVisible} setModalVisible={setModalVisible} />} 
+        />
         <Route path="/about" element={<About />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
