@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from './Modal';
 
 const Homepage = ({ modalVisible, setModalVisible }) => {
   console.log('hello');
@@ -15,7 +14,6 @@ const Homepage = ({ modalVisible, setModalVisible }) => {
         />
         <label>Toggle Modal</label>
       </div>
-      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </div>
   );
 }

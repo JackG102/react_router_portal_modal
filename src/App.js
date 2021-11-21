@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
+import Modal from './components/Modal';
 import About from './components/About';
 import Settings from './components/Settings';
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
+      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
       </div>
     </div>
   );
