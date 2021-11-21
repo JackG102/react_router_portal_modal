@@ -7,7 +7,6 @@ import {
 const Header = () => {
   return (
     <div className="header-container">
-      <h2>Header</h2>
       <nav>
           <ul>
             <li>
@@ -17,7 +16,7 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/settings">Settings</Link>
             </li>
           </ul>
         </nav>
