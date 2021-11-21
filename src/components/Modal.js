@@ -9,11 +9,16 @@ const Modal = ({ modalVisible, setModalVisible }) => {
       modalVisible ?
       
       <div className="modal-container ui raised very padded text container segment"> 
-        <h2>Who are you?</h2>
-        <p>This website is intended for US residents only. Please click the appropriate link below:</p>
+        <h2>Disclaimer</h2>
+        <p>This website that has informationis for US residents only.  By clicking 'I understand', you acknlowedge that information may not be applicable to other sovereign entities.</p>
         <div className="modal-link-container ui segmented container">
-          <a href="/" className="ui button">Reader</a>
-          <a href="/about" className="ui button">Content Creator</a>
+          <a 
+            href="javascript:void(0)" 
+            className="ui button green"
+            onClick={(event) => {setModalVisible(!modalVisible)}}
+          >
+            Acknowledge
+          </a>
         </div>
       </div>
  
